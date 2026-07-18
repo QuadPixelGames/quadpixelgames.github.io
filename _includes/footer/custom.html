@@ -1,3 +1,128 @@
 <!-- start custom footer snippets -->
 
+<style>
+  .qpg-donate {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 1.2rem 1.5rem 0.8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+  .qpg-donate__label {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #a0f0c0;
+    white-space: nowrap;
+  }
+  .qpg-donate__label span {
+    opacity: 0.6;
+    font-weight: 400;
+    font-size: 0.78rem;
+  }
+  .qpg-donate__amounts {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .qpg-donate__amounts button {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.15);
+    color: inherit;
+    border-radius: 6px;
+    padding: 0.25rem 0.65rem;
+    cursor: pointer;
+    font-size: 0.82rem;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .qpg-donate__amounts button:hover,
+  .qpg-donate__amounts button.active {
+    background: rgba(0,200,120,0.18);
+    border-color: #00c878;
+    color: #a0f0c0;
+  }
+  .qpg-donate__slider-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .qpg-donate__slider-wrap input[type=range] {
+    width: 110px;
+    accent-color: #00c878;
+    cursor: pointer;
+  }
+  .qpg-donate__amount-display {
+    font-weight: 700;
+    color: #a0f0c0;
+    min-width: 3rem;
+    text-align: right;
+  }
+  .qpg-donate__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: linear-gradient(135deg, #00c878 0%, #009955 100%);
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.4rem 1.1rem;
+    border-radius: 8px;
+    text-decoration: none !important;
+    box-shadow: 0 0 12px rgba(0,200,120,0.35);
+    transition: box-shadow 0.2s, transform 0.15s;
+    white-space: nowrap;
+  }
+  .qpg-donate__btn:hover {
+    box-shadow: 0 0 22px rgba(0,200,120,0.6);
+    transform: translateY(-1px);
+  }
+  .qpg-donate__btn svg {
+    width: 14px; height: 14px; fill: #fff;
+  }
+</style>
+
+<div class="qpg-donate">
+  <div class="qpg-donate__label">
+    💚 Support QuadPixel <span>/ keep the chaos funded</span>
+  </div>
+
+  <div class="qpg-donate__amounts" id="qpgAmountBtns">
+    <button onclick="qpgSet(10)">₹10</button>
+    <button onclick="qpgSet(20)">₹20</button>
+    <button onclick="qpgSet(50)">₹50</button>
+  </div>
+
+  <div class="qpg-donate__slider-wrap">
+    <input type="range" id="qpgSlider" min="1" max="500" value="30">
+    <span class="qpg-donate__amount-display" id="qpgDisplay">₹30</span>
+  </div>
+
+  <a id="qpgBtn"
+     href="upi://pay?pa=aatikshsinha@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=30&tn=Support%20QuadPixel"
+     class="qpg-donate__btn">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    Donate ₹30
+  </a>
+</div>
+
+<script>
+  (function() {
+    var slider  = document.getElementById('qpgSlider');
+    var display = document.getElementById('qpgDisplay');
+    var btn     = document.getElementById('qpgBtn');
+    var btns    = document.querySelectorAll('#qpgAmountBtns button');
+
+    function qpgUpdate(v) {
+      display.textContent = '₹' + v;
+      btn.href = 'upi://pay?pa=aatikshsinha@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=' + v + '&tn=Support%20QuadPixel';
+      btn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="width:14px;height:14px;fill:#fff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg> Donate ₹' + v;
+      btns.forEach(function(b){ b.classList.remove('active'); if(b.textContent.trim() === '₹'+v) b.classList.add('active'); });
+    }
+
+    window.qpgSet = function(v) { slider.value = v; qpgUpdate(v); };
+    slider.addEventListener('input', function(){ qpgUpdate(+slider.value); });
+  })();
+</script>
+
 <!-- end custom footer snippets -->
