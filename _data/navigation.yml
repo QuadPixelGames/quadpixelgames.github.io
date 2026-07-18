@@ -1,6 +1,8 @@
 main:
   - title: "Home"
     url: /
+  - title: "Games"
+    url: /games/
   - title: "Meet the Team"
     url: /team/
 
