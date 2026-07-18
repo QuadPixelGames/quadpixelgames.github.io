@@ -3,8 +3,7 @@ main:
     url: /
   - title: "Meet the Team"
     url: /team/
-  - title: "Flappy Kartik!"
-    url: /flappykartikgame/
+
   - title: "About"
     url: /about/
   - title: "All Posts"

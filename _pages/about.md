@@ -39,7 +39,7 @@ Come play.
 
   <!-- Donate Button -->
   <a id="upiLink"
-     href="upi://pay?pa=aatikshnew@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=30&tn=Support%20QuadPixel"
+     href="upi://pay?pa=aatikshsinha@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=30&tn=Support%20QuadPixel"
      class="btn btn--success">
     Donate ₹30
   </a>
@@ -64,7 +64,7 @@ Come play.
 
     function updateAmount(value) {
       amountLabel.textContent = `₹${value}`;
-      const upi = `upi://pay?pa=aatikshnew@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=${value}&tn=Support%20QuadPixel`;
+      const upi = `upi://pay?pa=aatikshsinha@okicici&pn=AATIKSH%20SINHA%20MINOR&cu=INR&am=${value}&tn=Support%20QuadPixel`;
       upiLink.href = upi;
       upiLink.textContent = `Donate ₹${value}`;
     }
