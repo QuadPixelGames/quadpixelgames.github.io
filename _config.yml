@@ -14,6 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: QuadPixel Games
+url: "https://quadpixelgames.github.io"
+baseurl: ""
 email:
 description: >- # this means to ignore newlines until "baseurl:"
   Games for all.
