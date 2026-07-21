@@ -3,7 +3,7 @@ layout: single
 title: "🎮 Blaster Balls!"
 permalink: /bbgame/
 author: aatiksh
-author_profile: true
+author_profile: false
 classes: wide
 ---
 

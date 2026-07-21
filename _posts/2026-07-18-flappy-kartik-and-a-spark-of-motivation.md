@@ -8,7 +8,7 @@ tags:
   - Game Dev
   - Flappy Kartik
 author: aatiksh
-author_profile: true
+author_profile: false
 ---
 
 So I was just randomly going through old files today — you know, the kind of aimless digging you do when you're procrastinating on something else — and I found it.

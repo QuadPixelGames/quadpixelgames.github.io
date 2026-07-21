@@ -7,7 +7,7 @@ tags:
   - Game Dev
   - Blaster Balls
 author: aatiksh
-author_profile: true
+author_profile: false
 ---
 
 So one day, there I was, thinking about making a video game. 

@@ -2,7 +2,7 @@
 layout: single
 title: "🎮 Games"
 permalink: /games/
-author_profile: true
+author_profile: false
 classes: wide
 ---
 
