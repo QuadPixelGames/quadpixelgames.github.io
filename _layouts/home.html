@@ -4,9 +4,17 @@ layout: archive
 
 {{ content }}
 
-<h1>👾 QuadPixel Games</h1>
-<p>We make dumb, chaotic, beautifully broken games. You're welcome.</p>
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
-<p>
-  <a href="{{ '/games/' | relative_url }}" class="btn btn--primary btn--large">🎮 See our games</a>
-</p>
+{% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% for post in posts limit: 4 %}
+    {% include archive-single.html type=entries_layout %}
+  {% endfor %}
+</div>
