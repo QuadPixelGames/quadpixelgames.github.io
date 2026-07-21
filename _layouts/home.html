@@ -4,9 +4,32 @@ layout: archive
 
 {{ content }}
 
-<h1>👾 QuadPixel Games</h1>
-<p>We make dumb, chaotic, beautifully broken games. You're welcome.</p>
+<div class="qpg-hero">
+  <div class="qpg-hero__logo">👾</div>
+  <h1 class="qpg-hero__title">QuadPixel Games</h1>
+  <p class="qpg-hero__tagline">We make chaotic little games with ✨ zero chill ✨ and max fun.</p>
+  
+  <div class="qpg-hero__actions">
+    <a href="{{ '/games/' | relative_url }}" class="qpg-btn qpg-btn--primary">
+      🎮 See Our Games
+    </a>
+    <a href="{{ '/about/' | relative_url }}" class="qpg-btn qpg-btn--secondary">
+      About the Studio
+    </a>
+  </div>
+</div>
 
-<p>
-  <a href="{{ '/games/' | relative_url }}" class="btn btn--primary btn--large">🎮 See our games</a>
-</p>
+<div class="qpg-stats">
+  <div class="qpg-stats__card">
+    <div class="qpg-stats__value">1</div>
+    <div class="qpg-stats__label">Janky Game on Itch</div>
+  </div>
+  <div class="qpg-stats__card">
+    <div class="qpg-stats__value">2</div>
+    <div class="qpg-stats__label">Upcoming Masterpieces</div>
+  </div>
+  <div class="qpg-stats__card">
+    <div class="qpg-stats__value">6-7</div>
+    <div class="qpg-stats__label">Kartik Brainrot Status</div>
+  </div>
+</div>
