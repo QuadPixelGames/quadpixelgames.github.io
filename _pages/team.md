@@ -26,8 +26,8 @@ Our quality control guy. He plays, tests, and actually gives useful feedback —
 ---
 
 ### 🎥 Kartik  
-**Role:** Gamer Trio Content / Professional "6-7" Enthusiast  
-Helps power the Gamer Trio with gameplay, commentary, and sheer chaos. Often found shouting "six-seven" while doing alternate palm-bobbing motions. Nobody knows what it means, but it's provocative.
+**Role:** Gamer Trio Content  
+Helps power the Gamer Trio with gameplay, commentary, and chaos.
 
 ---
 ---
