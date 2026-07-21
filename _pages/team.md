@@ -36,14 +36,3 @@ Helps power the Gamer Trio with gameplay, commentary, and general chaos (6-7 cer
 **Role:** Gamer Trio Content  
 Also part of the Gamer Trio content crew. Helps keep the energy unhinged and the videos rolling.
 
----
-
-### 🤖 ChatGPT  
-**Role:** AI Assistant, Code Whisperer  
-Not a human, not on the payroll, but kinda responsible for half the project working.
-
----
-
-**Disclaimer:** ChatGPT is a trademark of [OpenAI](https://openai.com).  
-This team, our projects, and everything else is not affiliated with or endorsed by OpenAI. Just vibes. 🤖✨
-
