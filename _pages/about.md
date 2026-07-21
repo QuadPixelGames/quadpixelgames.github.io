@@ -96,27 +96,7 @@ author_profile: false
     color: rgba(255,255,255,0.58);
     line-height: 1.6;
   }
-  .qpg-joke-block {
-    border-left: 3px solid #00ff88;
-    background: rgba(0,255,136,0.05);
-    border-radius: 0 14px 14px 0;
-    padding: 1.2rem 1.6rem;
-    margin: 2rem 0;
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.6;
-  }
-  .qpg-joke-block strong {
-    color: #00ff88;
-    font-size: 1.3rem;
-    letter-spacing: 0.1em;
-  }
-  .qpg-joke-block .qpg-joke-note {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-    margin-top: 0.4rem;
-    font-style: italic;
-  }
+
 </style>
 
 <div class="qpg-about-hero">
@@ -152,11 +132,7 @@ author_profile: false
   </div>
 </div>
 
-<div class="qpg-joke-block">
-  <strong>6️⃣7️⃣</strong>
-  <p style="margin:0.4rem 0 0 0;">Our secret stat. Not a score, not a level — just the vibe. If you know, you know. If you don't, it doesn't mean anything. That's literally the whole bit.</p>
-  <div class="qpg-joke-note">Powered by peak brainrot™ and LaMelo Ball's height.</div>
-</div>
+
 
 We're not here to win GOTY. We're here to make dumb fun — and maybe break a few rules while we're at it.
 
