@@ -4,17 +4,70 @@ layout: archive
 
 {{ content }}
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<div class="qpg-home">
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
+  <!-- Hero Section -->
+  <section class="qpg-hero-section">
+    <div class="qpg-hero-grid-bg"></div>
+    <div class="qpg-hero-content">
+      <div class="qpg-studio-badge">👾 INDIE GAME STUDIO</div>
+      <h1 class="qpg-hero-title">WE MAKE CHAOTIC GAMES.</h1>
+      <p class="qpg-hero-lead">QuadPixel is a developer collective building janky, wild, and wildly fun game experiences.</p>
+      <div class="qpg-hero-actions">
+        <a href="{{ '/games/' | relative_url }}" class="qpg-action-btn qpg-btn-primary">
+          🎮 See Our Games
+        </a>
+        <a href="{{ '/about/' | relative_url }}" class="qpg-action-btn qpg-btn-secondary">
+          About Us
+        </a>
+      </div>
+    </div>
+  </section>
 
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts limit: 4 %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
+  <!-- Featured Games Preview -->
+  <section class="qpg-featured-section">
+    <h2 class="qpg-section-title">🕹️ Featured Releases</h2>
+    <div class="qpg-featured-grid">
+      <!-- Flappy Kartik -->
+      <a href="https://aatiksh.itch.io/flappy-kartik" target="_blank" rel="noopener" class="qpg-featured-card card-flappy">
+        <div class="qpg-featured-card__media">🐦</div>
+        <div class="qpg-featured-card__info">
+          <span class="qpg-status-tag live">LIVE ON ITCH.IO</span>
+          <h3>Flappy Kartik</h3>
+          <p>Dodge the pipes, question your choices. The janky classic starring Kartik.</p>
+        </div>
+      </a>
+      
+      <!-- Blaster Balls -->
+      <div class="qpg-featured-card card-blaster">
+        <div class="qpg-featured-card__media">🎯</div>
+        <div class="qpg-featured-card__info">
+          <span class="qpg-status-tag upcoming">UPCOMING</span>
+          <h3>Blaster Balls</h3>
+          <p>A Unity shooter built around one simple idea: firing beach balls at speed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Devlogs -->
+  <section class="qpg-blog-section">
+    <h2 class="qpg-section-title">📰 Devlog Updates</h2>
+    <div class="qpg-devlog-grid">
+      {% if paginator %}
+        {% assign posts = paginator.posts %}
+      {% else %}
+        {% assign posts = site.posts %}
+      {% endif %}
+      {% for post in posts limit: 3 %}
+        <a href="{{ post.url | relative_url }}" class="qpg-devlog-card">
+          <span class="qpg-devlog-date">{{ post.date | date: "%B %d, %Y" }}</span>
+          <h3>{{ post.title }}</h3>
+          <p>{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          <span class="qpg-read-more">Read Update →</span>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
+
 </div>

@@ -27,7 +27,7 @@ Our quality control guy. He plays, tests, and actually gives useful feedback —
 
 ### 🎥 Kartik  
 **Role:** Gamer Trio Content  
-Helps power the Gamer Trio with gameplay, commentary, and general chaos (6-7 certified).
+Helps power the Gamer Trio with gameplay, commentary, and general chaos.
 
 ---
 ---
