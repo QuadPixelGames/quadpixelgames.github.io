@@ -22,7 +22,7 @@ classes: wide
 update: i only now found out there is lots of problems incase we use webgl like the thing has a problem (a % 0) somewhere in the code that i cannot find at all so here is a download link 👇
 
 <p>
-  <a href="https://QuadPixelGames.github.io/QuadPixelGames/assets/games/bbgamedownload/Blaster%20Balls!%20(INTEL%20-%20x86%20-%2032%20bit).zip">Blaster Balls! (Intel - 32 bit) </a>
+  <a href="{{ '/assets/games/bbgamedownload/Blaster%20Balls!%20(INTEL%20-%20x86%20-%2032%20bit).zip' | relative_url }}">Blaster Balls! (Intel - 32 bit) </a>
 </p>
 
 if your browser thinks the game is a virus, use this mirrored link..
