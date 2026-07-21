@@ -64,19 +64,26 @@
 
   /* ── LOGO sizing ── */
   .masthead .site-logo {
-    margin-right: 0.5rem !important;
-    padding: 0.2rem 0 !important;
+    margin-right: 1.5rem !important;
+    padding: 0 !important;
     display: flex !important;
     align-items: center !important;
+    height: 3rem !important; /* Forces the navbar back to a small original size */
+    position: relative;
+    width: 160px !important; /* Reserve horizontal space for the scaled logo */
   }
 
   .masthead .site-logo img {
-    height: 5.5rem !important;   /* HUGE logo */
-    max-height: 5.5rem !important;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) scale(2.5); /* Scale up massively without stretching navbar */
+    transform-origin: left center;
+    height: 3rem !important; 
+    max-height: 3rem !important;
     width: auto !important;
     display: block !important;
     object-fit: contain !important;
-    transform: scale(1.2);       /* Scale up slightly to counteract any internal transparent padding */
   }
 
   /* nav link colours */
@@ -443,9 +450,14 @@
     .qpg-hero-section {
       padding: 2.5rem 1.2rem;
     }
+    .masthead .site-logo {
+      height: 2.6rem !important;
+      width: 120px !important;
+    }
     .masthead .site-logo img {
-      height: 4rem !important;
-      max-height: 4rem !important;
+      height: 2.6rem !important;
+      max-height: 2.6rem !important;
+      transform: translateY(-50%) scale(2.2);
     }
     .qpg-featured-grid,
     .qpg-devlog-grid {
@@ -457,9 +469,14 @@
     .qpg-hero-title {
       font-size: 1.9rem !important;
     }
+    .masthead .site-logo {
+      height: 2.2rem !important;
+      width: 100px !important;
+    }
     .masthead .site-logo img {
-      height: 3rem !important;
-      max-height: 3rem !important;
+      height: 2.2rem !important;
+      max-height: 2.2rem !important;
+      transform: translateY(-50%) scale(2);
     }
   }
 </style>
